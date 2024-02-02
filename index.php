@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (isset($_SESSION['uniques_id'])) {//if user is logged in 
+        header("location: users.php");
+    }
+?>
 <?php include_once "header.php";?>
 <body>
     <div class="wrapper">
@@ -26,7 +32,7 @@
                 </div>
                 <div class="field image">
                     <label>Select Image</label>
-                    <input type="file" name="image" required>
+                    <input type="file" name="image" >
                 </div>
                 <div class="field button">
                     <input type="submit" value="Continue to chat">
