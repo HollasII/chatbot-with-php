@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if (isset($_SESSION['uniques_id'])) {//if user is logged in 
+    if (isset($_SESSION['unique_id'])) {//if user is logged in 
         header("location: users.php");
     }
 ?>
@@ -9,7 +9,7 @@
     <div class="wrapper">
         <section class="form signup">
             <header>Chat App</header>
-            <form action="#" enctype="multipart/form-data">
+            <form action="#" method="post" enctype="multipart/form-data">
                 <div class="error-txt">This is an error message</div>
                 <div class="name-details">
                     <div class="field input">
@@ -32,7 +32,7 @@
                 </div>
                 <div class="field image">
                     <label>Select Image</label>
-                    <input type="file" name="image" >
+                    <input type="file" name="image" required>
                 </div>
                 <div class="field button">
                     <input type="submit" value="Continue to chat">
